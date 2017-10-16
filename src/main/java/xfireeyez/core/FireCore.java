@@ -21,6 +21,8 @@ public class FireCore {
 	public void preInit(FMLPreInitializationEvent event) {
 		Utils.getLogger().info("Pre-Initializing");
 		
+		proxy.preInit(event);
+		
 		Utils.getLogger().info("Pre-Initialization Complete");
 	}
 	
@@ -29,12 +31,16 @@ public class FireCore {
 	public void init(FMLInitializationEvent event) {
 		Utils.getLogger().info("Initializing");
 		
+		proxy.init(event);
+		
 		Utils.getLogger().info("Initialization Complete");
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		Utils.getLogger().info("Post-Initializing");
+		
+		proxy.postInit(event);
 		
 		Utils.getLogger().info("Post-Initialization Complete");
 	}
